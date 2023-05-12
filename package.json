@@ -1,0 +1,30 @@
+{
+  
+  "name": "main-project-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node backend/server.js",
+    "data:import": "node backend/seederScript.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "gh-pages": "^5.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
